@@ -1,0 +1,16 @@
+{
+  "name": "manage-landing-page",
+  "version": "1.0.0",
+  "description": "![Design preview for the Manage landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch scss:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.35.1"
+  }
+}
