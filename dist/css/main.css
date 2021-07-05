@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Be Vietnam", sans-serif;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav__item {
+  display: inline-block;
+  padding: 0.5rem;
+  overflow-y: hidden;
+  cursor: pointer;
+}
+.nav__item:hover .nav__link {
+  transform: translateY(-150%);
+}
+.nav__item:hover .nav__link::before {
+  transform: translateY(150%);
+}
+.nav__link {
+  width: 100%;
+  height: 100%;
+  color: #242d52;
+  display: inline-block;
+  transform: translateY(0);
+  transition: all 0.3s ease-in;
+  position: relative;
+  font-weight: 700;
+}
+.nav__link::before {
+  position: absolute;
+  content: attr(data-title);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(150%);
+  color: #9095a7;
+}
+
+.btn {
+  position: relative;
+  background-color: #f25f3a;
+  padding: 0.6rem 2rem;
+  border-radius: 1.5rem;
+  color: #fafafa;
+  box-shadow: 0px 14px 10px -8px rgba(242, 95, 58, 0.5);
+  overflow: hidden;
+  vertical-align: baseline;
+  display: inline-block;
+}
+.btn:hover::before {
+  width: 140%;
+  height: 180%;
+  transform: translate(-20px, -20px);
+  overflow: hidden;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translate(0);
+  width: 0;
+  height: 0;
+  background-color: #fa927a;
+  border-radius: 50%;
+  transition: all 0.6s;
+}
+.btn--intro {
+  margin-top: 2rem;
+}
+
+.btn-text {
+  position: relative;
+  z-index: 1;
+}
+
+.main {
+  background: url(/dist/images/bg-tablet-pattern.svg) no-repeat 130% 130%;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+}
+
+.header-container {
+  padding: 0 10%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.intro-container {
+  padding: 0 10%;
+  padding-top: 8rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.intro-title {
+  font-size: 3.5rem;
+  color: #242d52;
+  margin-bottom: 2rem;
+}
+
+.intro-image-container {
+  width: 50%;
+  max-width: 580px;
+}
+
+.intro-image {
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=main.css.map */

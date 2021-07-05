@@ -3,20 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Manage landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main class="main">
+    <div class="main-container">
+      <header class="header">
+        <div class="header-container">
+          <a href="#" class="logo-link"><img src="images/logo.svg" alt="header-logo" class="logo-image"></a>
+          <nav class="nav">
+            <li class="nav__item"><a href="#" class="nav__link" data-title="Pricing">Pricing</a></li>
+            <li class="nav__item"><a href="#" class="nav__link" data-title="Product">Product</a></li>
+            <li class="nav__item"><a href="#" class="nav__link" data-title="About uas">About Us</a></li>
+            <li class="nav__item"><a href="#" class="nav__link" data-title="Careers">Careers</a></li>
+            <li class="nav__item"><a href="#" class="nav__link"data-title="Community">Community</a></li>
+          </nav>
+          <a href="#" class="btn"><span class="btn-text">Get started</span></a>
+        </div>
+      </header>
+      <section class="intro">
+        <div class="intro-container">
+          <div class="intro-inf">
+            <h1 class="intro-title">Bring everyone together to build better products.</h1>
+            <p class="intro-description">Manage makes it simple for software teams to plan day-to-day 
+              tasks while keeping the larger team goals in view.</p>
+              <a href="#" class="btn btn--intro"><span class="btn-text">Get started</span></a>
+          </div>
+          <div class="intro-image-container">
+            <img src="/dist/images/illustration-intro.svg" class="intro-image">
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
 
-  Pricing
+  <!-- Pricing
   Product
   About Us
   Careers
@@ -90,12 +114,8 @@
   Updates in your inbox…
   Go
 
-  Copyright 2020. All Rights Reserved
+  Copyright 2020. All Rights Reserved -->
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <script src="js/main.js" type="module"></script>
 </body>
 </html>

@@ -1,0 +1,20 @@
+@use '../utilities/mixins' as m;
+
+.header{
+    width: 100%;
+    position: absolute;
+}
+
+.header-container{
+    @include m.general-padding;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link{
+    display: flex;
+    align-items: center;
+}

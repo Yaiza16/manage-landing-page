@@ -1,0 +1,44 @@
+@use '../utilities/variables' as v;
+
+.btn{
+    position: relative;
+    background-color: v.$c-primary;
+    padding: .6rem 2rem;
+    border-radius: 1.5rem;
+    color: v.$c-lightGray;
+    box-shadow: 0px 14px 10px -8px rgba(v.$c-primary, .5);
+    overflow: hidden;
+    vertical-align: baseline;
+    display: inline-block;
+
+   
+    &:hover::before{
+        width: 140%;
+        height: 180%;
+        transform: translate(-20px, -20px);
+        overflow: hidden;
+    }
+    
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        transform: translate(0);
+        width: 0;
+        height: 0;
+        background-color: v.$light-red;
+        border-radius: 50%;
+        transition: all .6s;
+    }
+
+
+    //Modifiers
+    &--intro{
+        margin-top: 2rem;
+    }
+}
+    
+.btn-text{
+    position: relative;
+    z-index: 1;
+}

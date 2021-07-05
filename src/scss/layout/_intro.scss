@@ -1,0 +1,28 @@
+@use '../utilities/mixins' as m;
+@use '../utilities/variables' as v;
+
+
+.intro-container{
+    @include m.general-padding;
+    padding-top: 8rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+
+.intro-title{
+    font-size: 3.5rem;
+    color: v.$c-secundary;
+    margin-bottom: 2rem;
+}
+
+
+.intro-image-container{
+    width: 50%;
+    max-width: 580px;
+}
+
+.intro-image{
+    object-fit: cover;
+}

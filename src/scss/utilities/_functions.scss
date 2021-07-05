@@ -1,0 +1,8 @@
+@use 'variables' as v;
+
+
+// Font bold
+@function font-weight($key){
+    $value: map-get(v.$font-bold, $key);
+    @return $value;
+}

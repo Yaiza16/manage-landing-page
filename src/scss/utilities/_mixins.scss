@@ -1,0 +1,7 @@
+@use 'variables' as v;
+
+// General padding for all sections
+@mixin general-padding{
+    padding: 0 10%;
+}
+
