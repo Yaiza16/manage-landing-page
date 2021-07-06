@@ -24,3 +24,8 @@ li{
 a{
     text-decoration: none;
 }
+
+// Change swiper-pagination color
+:root {
+    --swiper-theme-color: #{v.$c-primary};
+}

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> 
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
@@ -78,16 +79,16 @@
       <section class="testimonials">
         <div class="testimonials-container">
           <h2 class="testimonials-title">What they’ve said</h2>
-          <div class="testimonials-slider">
-            <div class="slider">
-              <div class="slider-item">
+          <div class="testimonials-slider swiper-container mySwiper">
+            <div class="slider swiper-wrapper">
+              <div class="slider-item swiper-slide">
                 <img src="/dist/images/avatar-anisha.png" class="slider-item__picture">
                 <p class="slider-item__name">Anisha Li</p>
                 <p class="slider-item__testimonial">“Manage has supercharged our team’s workflow. The ability to maintain 
                   visibility on larger milestones at all times keeps everyone motivated.”</p>
               </div>
 
-              <div class="slider-item">
+              <div class="slider-item swiper-slide">
                 <img src="/dist/images/avatar-ali.png" class="slider-item__picture">
                 <p class="slider-item__name">Ali Bravo</p>
                 <p class="slider-item__testimonial">“We have been able to cancel so many other subscriptions since using 
@@ -95,23 +96,26 @@
                   more focused.”</p>
               </div>
 
-              <div class="slider-item">
+              <div class="slider-item swiper-slide">
                 <img src="/dist/images/avatar-richard.png" class="slider-item__picture">
                 <p class="slider-item__name">Richard Watts</p>
                 <p class="slider-item__testimonial">“Manage allows us to provide structure and process. It keeps us organized 
                   and focused. I can’t stop recommending them to everyone I talk to!”</p>
               </div>
 
-              <div class="slider-item slider-item--hidden">
+              <div class="slider-item swiper-slide">
                 <img src="/dist/images/avatar-shanai.png" class="slider-item__picture">
                 <p class="slider-item__name">Shanai Gough</p>
                 <p class="slider-item__testimonial">“Their software allows us to track, manage and collaborate on our projects 
                   from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
               </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="pagination swiper-pagination"></div>
           </div>
           <div class="btn-container">
-            <a href="" class="btn">Get Started</a>
+            <a href="#" class="btn btn--testimonials"><span class="btn-text">Get started</span></a>
           </div>
         </div>
       </section>
@@ -154,6 +158,7 @@
 
   Copyright 2020. All Rights Reserved  -->
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/main.js" type="module"></script>
 </body>
 </html>

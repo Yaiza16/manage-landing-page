@@ -23,6 +23,10 @@ a {
   text-decoration: none;
 }
 
+:root {
+  --swiper-theme-color: #f25f3a;
+}
+
 body {
   font-family: "Be Vietnam", sans-serif;
 }
@@ -104,6 +108,9 @@ body {
   font-weight: 700;
   box-shadow: none;
 }
+.btn--testimonials {
+  margin-bottom: 1rem;
+}
 
 .btn-text {
   position: relative;
@@ -111,8 +118,6 @@ body {
 }
 
 .slider {
-  display: flex;
-  gap: 2.5rem;
   margin-top: 5rem;
 }
 
@@ -122,6 +127,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;
 }
 .slider-item__picture {
   width: 80px;
@@ -138,6 +144,40 @@ body {
 }
 .slider-item--hidden {
   display: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(50%);
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 50%;
+  color: #f25f3a;
+  transition: all 0.3s ease-in;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #9095a7;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 2rem;
+}
+
+.swiper-button-prev {
+  right: unset;
+  left: 0;
+}
+.swiper-button-prev:hover {
+  color: #9095a7;
+}
+
+.pagination {
+  position: static;
+  margin-top: 0.5rem;
 }
 
 .main {
@@ -238,11 +278,13 @@ body {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  margin-bottom: 5rem;
 }
 
 .testimonials-slider {
-  width: 120%;
-  margin-bottom: 3.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  position: relative;
 }
 
 /*# sourceMappingURL=main.css.map */
