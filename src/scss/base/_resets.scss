@@ -1,7 +1,14 @@
+@use '../utilities/variables' as v;
+
 *, *::before, *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+p{
+    color: v.$c-darkGrayishBlue;
+    line-height: 1.6rem;
 }
 
 li{

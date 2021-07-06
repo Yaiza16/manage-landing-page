@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+p {
+  color: #9095a7;
+  line-height: 1.6rem;
+}
+
 li {
   list-style: none;
 }
@@ -89,6 +94,11 @@ body {
 .btn--intro {
   margin-top: 2rem;
 }
+.btn--feature {
+  padding: 0.6rem 1.5rem;
+  font-weight: 700;
+  box-shadow: none;
+}
 
 .btn-text {
   position: relative;
@@ -96,7 +106,7 @@ body {
 }
 
 .main {
-  background: url(/dist/images/bg-tablet-pattern.svg) no-repeat 130% 130%;
+  background: url(/dist/images/bg-tablet-pattern.svg) no-repeat 125% -50%, url(/dist/images/bg-tablet-pattern.svg) no-repeat -80% 1020px;
 }
 
 .header {
@@ -139,6 +149,56 @@ body {
 
 .intro-image {
   object-fit: cover;
+}
+
+.about-container {
+  padding: 0 10%;
+  margin-top: 4rem;
+  display: flex;
+  gap: 7rem;
+}
+
+.about-info,
+.about-features {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.about-info__title {
+  font-size: 2.5rem;
+  color: #242d52;
+}
+.about-info__description {
+  margin-top: 1.5rem;
+  width: 70%;
+}
+
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.feature-item {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  column-gap: 2rem;
+  row-gap: 1rem;
+  align-items: center;
+  grid-template-areas: "btn title" ". description";
+}
+.feature-item__btn {
+  grid-area: btn;
+}
+.feature-item__title {
+  grid-area: title;
+  font-size: 1.3rem;
+  color: #242d52;
+  font-weight: 700;
+}
+.feature-item__description {
+  grid-area: description;
 }
 
 /*# sourceMappingURL=main.css.map */

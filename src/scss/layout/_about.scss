@@ -1,0 +1,68 @@
+@use '../utilities/mixins' as m;
+@use '../utilities/variables' as v;
+@use '../utilities/functions' as f;
+
+
+.about-container{
+    @include m.general-padding;
+    margin-top: 4rem;
+    display: flex;
+    gap: 7rem;
+}
+
+.about-info, 
+.about-features{
+    // Both divs have the same width
+    flex-basis: 0; 
+    flex-grow: 1;
+}
+
+.about-info{
+
+    &__title{
+        font-size: 2.5rem;
+        color: v.$c-secundary;
+    }
+
+    &__description{
+        margin-top: 1.5rem;
+        width: 70%;
+    }
+}
+
+.about-features{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.feature-item{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 2rem;
+    row-gap: 1rem;
+    align-items: center;
+    grid-template-areas: 
+    "btn title"
+    ". description";
+
+    &__btn{
+        grid-area: btn;
+        
+    }
+
+    &__title{
+        grid-area: title;
+        font-size: 1.3rem;
+        color: v.$c-secundary;
+        font-weight: f.font-weight('bold');
+
+    }
+
+
+    &__description{
+        grid-area: description;
+    }
+}
+

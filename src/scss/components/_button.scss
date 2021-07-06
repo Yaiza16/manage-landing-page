@@ -1,4 +1,5 @@
 @use '../utilities/variables' as v;
+@use '../utilities/functions' as f;
 
 .btn{
     position: relative;
@@ -35,6 +36,12 @@
     //Modifiers
     &--intro{
         margin-top: 2rem;
+    }
+
+    &--feature{
+        padding: .6rem 1.5rem;
+        font-weight: f.font-weight('bold');
+        box-shadow: none;
     }
 }
     
