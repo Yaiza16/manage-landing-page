@@ -1,0 +1,38 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.team{
+    background-color: v.$c-primary;
+
+
+}
+
+.team-container{
+    @include m.general-padding;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    
+    &::before{
+        content: "";
+        position: absolute;
+        background-image: url(/dist/images/bg-tablet-pattern.svg);
+        width: 814px;
+        height: 814px;
+        background-position: top left;
+        top: -20px;
+        left: -20px;
+        filter: opacity(.08);
+    }
+}
+
+.team-title{
+    width: 50%;
+    color: v.$c-paleRed;
+    line-height: 3rem;
+    z-index:999;
+}

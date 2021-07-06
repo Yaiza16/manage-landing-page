@@ -111,6 +111,18 @@ body {
 .btn--testimonials {
   margin-bottom: 1rem;
 }
+.btn--team {
+  color: #f25f3a;
+  background-color: #ffefeb;
+  font-weight: 700;
+  box-shadow: none;
+}
+.btn--team:hover {
+  color: #fa927a;
+}
+.btn--team::before {
+  background-color: #fafafa;
+}
 
 .btn-text {
   position: relative;
@@ -285,6 +297,39 @@ body {
   width: 100%;
   margin-bottom: 2rem;
   position: relative;
+}
+
+.team {
+  background-color: #f25f3a;
+}
+
+.team-container {
+  padding: 0 10%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.team-container::before {
+  content: "";
+  position: absolute;
+  background-image: url(/dist/images/bg-tablet-pattern.svg);
+  width: 814px;
+  height: 814px;
+  background-position: top left;
+  top: -20px;
+  left: -20px;
+  filter: opacity(0.08);
+}
+
+.team-title {
+  width: 50%;
+  color: #ffefeb;
+  line-height: 3rem;
+  z-index: 999;
 }
 
 /*# sourceMappingURL=main.css.map */

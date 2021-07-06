@@ -27,7 +27,7 @@
         transform: translate(0);
         width: 0;
         height: 0;
-        background-color: v.$light-red;
+        background-color: v.$c-lightRed;
         border-radius: 50%;
         transition: all .6s;
     }
@@ -46,6 +46,23 @@
 
     &--testimonials{
         margin-bottom: 1rem;
+    }
+
+    &--team{
+        color: v.$c-primary;
+        background-color: v.$c-paleRed;
+        font-weight: f.font-weight('bold');
+        box-shadow: none;
+
+        &:hover{
+            color: v.$c-lightRed;
+        }
+
+        &::before{
+            background-color: v.$c-lightGray;
+        }
+
+
     }
 }
     
