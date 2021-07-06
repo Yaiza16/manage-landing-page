@@ -1,4 +1,12 @@
 .testimonials-container{
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.testimonials-slider{
+    width: 120%;
+    margin-bottom: 3.5rem;
 }
