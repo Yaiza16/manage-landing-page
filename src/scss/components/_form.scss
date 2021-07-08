@@ -16,7 +16,6 @@
 };
 
 .form-input{
-    @include m.form-padding;
     padding-left: 1rem; padding-right: 1rem;
     border-radius: 1.4rem;
     border: 1px solid transparent;

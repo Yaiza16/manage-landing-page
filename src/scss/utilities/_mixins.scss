@@ -10,9 +10,7 @@
     padding-left: 5%;
 }
 
-@mixin form-padding{
-    padding: .8rem 1.3rem;
-}
+
 
 @mixin mq($key){
     $size: map-get(v.$media-query, $key);
