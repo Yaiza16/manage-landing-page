@@ -1,4 +1,5 @@
-import titleAnimation from "./animations.js";
+import {titleAnimation, headerAnimationRemoved } from "./animations.js";
+import hamburger from "./hamburger.js";
 import headerIntersecting from "./headerIntersecting.js";
 import slider from "./slider.js";
 import validateEmail from "./validateEmail.js";
@@ -8,5 +9,7 @@ slider();
 validateEmail();
 headerIntersecting();
 titleAnimation();
+headerAnimationRemoved();
+hamburger();
 
 

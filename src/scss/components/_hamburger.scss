@@ -1,0 +1,44 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.hamburger{
+    width: 35px;
+    height: 15px;
+    position: relative;
+    display: none;
+    cursor: pointer;
+
+    &__line{
+        position: absolute;
+        height: 3px;
+        border-radius: 3px;
+        width: 100%;
+        background-color: v.$c-secundary;
+        transition: transform .3s ease;
+
+
+        &:nth-child(1){
+            top: 0;
+        }
+
+        &:nth-child(2){
+            bottom: 0;
+        }
+    }
+
+    &--actived{
+
+        & .hamburger__line:nth-child(1){
+            transform: rotate(45deg);
+            top: 6px;
+        }
+        & .hamburger__line:nth-child(2){
+            transform: rotate(-45deg);
+            bottom: 6px;
+        }
+    }
+
+    @include m.mq('lg'){
+        display: inline;
+    }
+}

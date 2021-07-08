@@ -8,6 +8,16 @@
     margin-top: 4rem;
     display: flex;
     gap: 7rem;
+
+    @include m.mq('md'){
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    @include m.mq('sm'){
+        margin-top: 5.5rem;
+        @include m.general-padding-small;
+    }
 }
 
 .about-info, 
@@ -18,10 +28,17 @@
 }
 
 .about-info{
-
     &__description{
         margin-top: 1.5rem;
         width: 70%;
+    }
+
+    @include m.mq('md'){
+        text-align: center;
+
+        &__description{
+            width: 100%;
+        }
     }
 }
 
@@ -41,6 +58,14 @@
     grid-template-areas: 
     "btn title"
     ". description";
+
+    @include m.mq('md'){
+        grid-template-areas: 
+        "btn title"
+        "description description";
+        grid-template-columns: auto 1fr;
+    }
+    
 
     &__btn{
         grid-area: btn;

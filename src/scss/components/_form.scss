@@ -1,6 +1,20 @@
 @use '../utilities/variables' as v;
 @use '../utilities/mixins' as m;
 
+.form-container{
+    @include m.mq('md'){
+        order: 1;
+    }
+}
+
+.form-newsletter{
+    @include m.mq('xsm'){
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    };
+};
+
 .form-input{
     @include m.form-padding;
     padding-left: 1rem; padding-right: 1rem;
@@ -10,6 +24,10 @@
     margin-right: .2rem;
     outline: none;
     min-width: 13rem;
+
+    @include m.mq('xsm'){
+        min-width: 15rem;
+    }
 
 
     &::placeholder{

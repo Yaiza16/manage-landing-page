@@ -1,5 +1,6 @@
 @use '../utilities/variables' as v;
 @use '../utilities/functions' as f;
+@use '../utilities/mixins' as m;
 
 *, *::before, *::after{
     margin: 0;
@@ -10,6 +11,10 @@
 h2{
     font-size: 2.4rem;
     color: v.$c-secundary;
+
+    @include m.mq('sm'){
+        font-size: 2rem;
+    }
 }
 
 p{

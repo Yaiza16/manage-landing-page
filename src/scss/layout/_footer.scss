@@ -3,26 +3,63 @@
 
 .footer{
     background-color: v.$c-darkBlue;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-container{
     @include m.general-padding;
     padding-top: 2rem; padding-bottom: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 8rem;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "logo links newsletter"
+    "icons links copyright";   
+    
+    @include m.mq('lg'){
+        column-gap: 4rem;
+    }
+
+    @include m.mq('md'){
+        width: 100%;
+        grid-template-columns:60%;
+        grid-template-rows: repeat(5, auto);
+        row-gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas: 
+        "newsletter"
+        "links"
+        "icons"
+        "logo"
+        "copyright";
+    }
+
+    @include m.mq('sm'){
+        grid-template-columns:100%;
+        @include m.general-padding-small;
+    }
 }
 
-.footer-social-icons{
+.logo-container{
+    grid-area: logo;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .social-icons-container{
+    grid-area: icons;
     display: flex;
     justify-content: space-between;
+
+    @include m.mq('md'){
+        justify-content: center;
+        gap: 1rem;
+    }
 }
+
 .social-icon{
     color: v.$c-lightGray;
     transition: color .3s ease;
@@ -34,11 +71,16 @@
     }
 }
 
-.footer-links{
-    display: flex;
-    color: v.$c-lightGray;
-    gap: 10rem;
 
+//Footer links
+.footer-links-container{
+    grid-area: links;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-links{
+    
     &__column{
         display: flex;
         flex-direction: column;
@@ -54,6 +96,18 @@
             color: v.$c-primary;
         }
 
+    }    
+}
+
+
+
+//Newsletter
+.footer-newsletter-container{
+    grid-area: newsletter;
+    text-align: right;
+
+    @include m.mq('md'){
+        text-align: center;
     }
 }
 
@@ -63,7 +117,17 @@
     justify-content: space-between;
 }
 
+
+//Copyright
+.footer-copyright-container{
+    grid-area: copyright;
+}
+
 .footer-copyright{
     font-size: .7rem;
     text-align: right;
+
+    @include m.mq('lg'){
+        text-align: center;
+    }
 }

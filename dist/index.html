@@ -10,19 +10,25 @@
   <title>Frontend Mentor | Manage landing page</title>
 </head>
 <body>
-  <main class="main">
-    <div class="main-container">
+  <main class="main" id="site">
+    <div class="main-container" id="site-container">
       <header class="header header--animated" id="header">
         <div class="header-container">
           <a href="#" class="logo-link"><img src="images/logo-navscrolled.svg" alt="header-logo" class="logo-image"></a>
-          <nav class="nav">
-            <li class="nav__item"><a href="#" class="nav__link" data-title="Pricing">Pricing</a></li>
-            <li class="nav__item"><a href="#" class="nav__link" data-title="Product">Product</a></li>
-            <li class="nav__item"><a href="#" class="nav__link" data-title="About uas">About Us</a></li>
-            <li class="nav__item"><a href="#" class="nav__link" data-title="Careers">Careers</a></li>
-            <li class="nav__item"><a href="#" class="nav__link"data-title="Community">Community</a></li>
+          <nav class="nav" id="nav">
+            <div class="nav-container">
+              <li class="nav__item"><a href="#" class="nav__link" data-title="Pricing">Pricing</a></li>
+              <li class="nav__item"><a href="#" class="nav__link" data-title="Product">Product</a></li>
+              <li class="nav__item"><a href="#" class="nav__link" data-title="About uas">About Us</a></li>
+              <li class="nav__item"><a href="#" class="nav__link" data-title="Careers">Careers</a></li>
+              <li class="nav__item"><a href="#" class="nav__link"data-title="Community">Community</a></li>
+            </div>
           </nav>
-          <a href="#" class="btn"><span class="btn-text">Get started</span></a>
+          <a href="#" class="btn btn--header"><span class="btn-text">Get started</span></a>
+          <div class="hamburger" id="hamburger">
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+          </div>
         </div>
       </header>
       <section class="intro" id="intro">
@@ -31,7 +37,9 @@
             <h1 class="intro-title" id="title-site">Bring everyone together to build better products.</h1>
             <p class="intro-description">Manage makes it simple for software teams to plan day-to-day 
               tasks while keeping the larger team goals in view.</p>
+            <div class="btn-container">
               <a href="#" class="btn btn--intro"><span class="btn-text">Get started</span></a>
+            </div>
           </div>
           <div class="intro-image-container">
             <img src="/dist/images/illustration-intro.svg" class="intro-image">
@@ -50,7 +58,9 @@
 
           <div class="about-features">
             <div class="feature-item">
-              <div class="feature-item__btn btn btn--feature">01</div>
+              <div class="btn-container">
+                <div class="feature-item__btn btn btn--feature">01</div>
+              </div>
               <p class="feature-item__title">Track company-wide progress</p>
               <p class="feature-item__description">See how your day-to-day tasks fit into the wider vision. Go from 
                 tracking progress at the milestone level all the way done to the 
@@ -58,7 +68,9 @@
             </div>
 
             <div class="feature-item">
-              <div class="feature-item__btn btn btn--feature">02</div>
+              <div class="btn-container">
+                <div class="feature-item__btn btn btn--feature">02</div>
+              </div>
               <p class="feature-item__title">Advanced built-in reports</p>
               <p class="feature-item__description">See how your day-to-day tasks fit into the wider vision. Go from 
                 tracking progress at the milestone level all the way done to the 
@@ -66,7 +78,9 @@
             </div>
 
             <div class="feature-item">
-              <div class="feature-item__btn btn btn--feature">03</div>
+              <div class="btn-container">
+                <div class="feature-item__btn btn btn--feature">03</div>
+              </div>
               <p class="feature-item__title">Everything you need in one place</p>
               <p class="feature-item__description">Stop jumping from one service to another to communicate, store files, 
                 track tasks and share documents. Manage offers an all-in-one team 
@@ -126,11 +140,55 @@
           <a href="#" class="btn btn--team"><span class="btn-text">Get started</span></a>
         </div>
       </section>
-
       <footer class="footer">
         <div class="footer-container">
+          <div class="logo-container">
+            <a href="" class="logo-link"><img src="/dist/images/logo-footer.svg" alt="footer-logo" class="logo-footer"></a>
+          </div>
+
+          <div class="social-icons-container">
+              <a href="" class="social-icon-link"><i class="social-icon icon-facebook"></i></a>
+              <a href="" class="social-icon-link"><i class="social-icon icon-youtube"></i></a>
+              <a href="" class="social-icon-link"><i class="social-icon icon-twitter"></i></a>
+              <a href="" class="social-icon-link"><i class="social-icon icon-pinterest"></i></a>
+              <a href="" class="social-icon-link"><i class="social-icon icon-instagram"></i></a>
+          </div>
+
+          <div class="footer-links-container">
+            <div class="footer-links__column">
+              <a href="#" class="footer-links__item">Home</a>
+              <a href="#" class="footer-links__item">Pricing</a>
+              <a href="#" class="footer-links__item">Product</a>
+              <a href="#" class="footer-links__item">About us</a>
+            </div>
+            <div class="footer-links__column">
+              <a href="#" class="footer-links__item">Careers</a>
+              <a href="#" class="footer-links__item">Community</a>
+              <a href="#" class="footer-links__item">Privacy policy</a>
+            </div>
+          </div>
+
+          <div class="footer-newsletter-container">
+            <div class="form-container">
+              <form class="form-newsletter" id="form">
+                <input type="text" class="form-input" placeholder="Updates in your inbox..." id="email">
+                <button type="submit" class="btn btn--form"><span class="btn-text">Go</span></button>
+            </form>
+            <span class="form-error-message form-error-message--hidden" id="error-message">Please insert a valid email</span>
+            </div>
+          </div>
+
+          <div class="footer-copyright-container">
+            <p class="footer-copyright">Copyright 2020. All Rights Reserved</p>
+          </div>
+        </div>
+
+      </footer>
+
+      <!-- <footer class="footer">
+        <div class="footer-container">
           <div class="footer-section footer-social-icons">
-            <a href="" class="logo-link"><img src="/dist/images/logo-footer.svg" alt="footer-logo" class="logo-image"></a>
+            <a href="" class="logo-link"><img src="/dist/images/logo-footer.svg" alt="footer-logo" class="logo-footer"></a>
             <div class="social-icons-container">
               <a href="" class="social-icon-link"><i class="social-icon icon-facebook"></i></a>
               <a href="" class="social-icon-link"><i class="social-icon icon-youtube"></i></a>
@@ -164,7 +222,7 @@
             <p class="footer-copyright">Copyright 2020. All Rights Reserved</p>
           </div>
         </div>
-      </footer>
+      </footer> -->
     </div>
   </main>
 

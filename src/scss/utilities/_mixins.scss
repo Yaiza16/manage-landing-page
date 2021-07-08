@@ -5,7 +5,20 @@
     padding: 0 10%;
 }
 
+@mixin general-padding-small{
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
 @mixin form-padding{
     padding: .8rem 1.3rem;
 }
 
+@mixin mq($key){
+    $size: map-get(v.$media-query, $key);
+
+    @media only screen and (max-width: $size){
+        @content;
+    }
+}
+  

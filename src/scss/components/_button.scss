@@ -36,6 +36,12 @@
 
 
     //Modifiers
+    &--header{
+        @include m.mq('lg'){
+            display: none;
+        }
+    }
+
     &--intro{
         margin-top: 2rem;
     }
@@ -70,8 +76,16 @@
     }
 
     &--form{
-        @include m.form-padding;
+        padding: .8rem 1.3rem;
         box-shadow: none;
+
+        @include m.mq('md'){
+            padding: .8rem 1.7rem;
+        }
+
+        @include m.mq('xsm'){
+            padding: .8rem 2rem;
+        }
     }
 }
     

@@ -16,10 +16,6 @@ $c-lightRed: hsl(11, 93%, 73%);
 $c-red: hsl(0, 100%, 38%);
 $c-green: hsl(110, 100%, 31%);
 
-
-
-
-
 // ****************
 // FONT & FEATURES
 // ****************
@@ -29,4 +25,15 @@ $font-bold: (
     'bold': 700,
     'medium': 500,
     'regular': 400
+);
+
+// ****************
+// BREAKPOINTS
+// ****************
+
+$media-query: (
+    'lg': 1100px,
+    'md': 900px,
+    'sm': 600px,
+    'xsm': 450px
 )

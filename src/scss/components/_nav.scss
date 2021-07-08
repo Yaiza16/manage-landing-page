@@ -1,10 +1,36 @@
 @use '../utilities/variables' as v;
 @use '../utilities/functions' as f;
+@use '../utilities/mixins' as m;
 
 .nav{
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    @include m.mq('lg'){
+        position: fixed;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.1);
+        //display: flex;
+        justify-content: center;
+        display: none;
+
+        &--actived{
+            display: flex;
+            align-items: flex-start;
+            height: 100vh;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+        }
+    }
+
+    @include m.mq('md'){
+        padding-top: 5rem;
+    }
+
 
     &__item{
         display: inline-block;
@@ -46,5 +72,19 @@
             color: v.$c-darkGrayishBlue;
 
         }
+    }
+}
+
+.nav-container{
+
+    @include m.mq('lg'){
+        width: 80%;
+        margin-top: 10%;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }

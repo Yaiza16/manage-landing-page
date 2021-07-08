@@ -1,4 +1,4 @@
-export default function titleAnimation(){
+export function titleAnimation(){
     const title = document.getElementById('title-site');
     const titleText = title.textContent;
     const splitTitle = titleText.split("");
@@ -21,7 +21,10 @@ export default function titleAnimation(){
             return;
         }
     }
+}
 
+// We need to remove the animation when that ends. If we not, scrolled header animation won't work.
+export function headerAnimationRemoved(){
     const header = document.getElementById('header');
     
     header.addEventListener('animationend', () =>{

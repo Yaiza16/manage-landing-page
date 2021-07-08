@@ -16,6 +16,14 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+
+    @include m.mq('sm'){
+        @include m.general-padding-small;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    
     
     &::before{
         content: "";
@@ -35,4 +43,9 @@
     color: v.$c-paleRed;
     line-height: 3rem;
     z-index:999;
+    @include m.mq('sm'){
+       width: 100%;
+       text-align: center;
+    }
+    
 }
