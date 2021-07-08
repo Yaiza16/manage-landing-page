@@ -1,0 +1,69 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.footer{
+    background-color: v.$c-darkBlue;
+}
+
+.footer-container{
+    @include m.general-padding;
+    padding-top: 2rem; padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.footer-social-icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-icons-container{
+    display: flex;
+    justify-content: space-between;
+}
+.social-icon{
+    color: v.$c-lightGray;
+    transition: color .3s ease;
+    font-size: 1.3rem;
+
+
+    &:hover{
+        color: v.$c-primary;
+    }
+}
+
+.footer-links{
+    display: flex;
+    color: v.$c-lightGray;
+    gap: 10rem;
+
+    &__column{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    &__item{
+        color: v.$c-lightGray;
+        font-size: .9rem;
+        transition: color .3s ease;
+
+        &:hover{
+            color: v.$c-primary;
+        }
+
+    }
+}
+
+.footer-newsletter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-copyright{
+    font-size: .7rem;
+    text-align: right;
+}

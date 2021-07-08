@@ -4,10 +4,13 @@
 @import 'base/resets';
 @import 'base/typography';
 
+@import 'vendors/iconmoon';
+
 
 @import 'components/nav';
 @import 'components/button';
 @import 'components/slider';
+@import 'components/form';
 
 @import 'layout/main';
 @import 'layout/header';
@@ -15,3 +18,4 @@
 @import 'layout/about';
 @import 'layout/testimonials';
 @import 'layout/team';
+@import 'layout/footer'

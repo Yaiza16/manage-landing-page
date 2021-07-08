@@ -1,5 +1,7 @@
 @use '../utilities/variables' as v;
 @use '../utilities/functions' as f;
+@use '../utilities/mixins' as m;
+
 
 .btn{
     position: relative;
@@ -42,6 +44,10 @@
         padding: .6rem 1.5rem;
         font-weight: f.font-weight('bold');
         box-shadow: none;
+
+        &::before{
+            content: unset;
+        }
     }
 
     &--testimonials{
@@ -61,8 +67,11 @@
         &::before{
             background-color: v.$c-lightGray;
         }
+    }
 
-
+    &--form{
+        @include m.form-padding;
+        box-shadow: none;
     }
 }
     

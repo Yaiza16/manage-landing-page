@@ -25,6 +25,12 @@ a{
     text-decoration: none;
 }
 
+button{
+    appearance: none;
+    border: none;
+    cursor: pointer;
+}
+
 // Change swiper-pagination color
 :root {
     --swiper-theme-color: #{v.$c-primary};

@@ -12,9 +12,9 @@
 <body>
   <main class="main">
     <div class="main-container">
-      <header class="header">
+      <header class="header header--animated" id="header">
         <div class="header-container">
-          <a href="#" class="logo-link"><img src="images/logo.svg" alt="header-logo" class="logo-image"></a>
+          <a href="#" class="logo-link"><img src="images/logo-navscrolled.svg" alt="header-logo" class="logo-image"></a>
           <nav class="nav">
             <li class="nav__item"><a href="#" class="nav__link" data-title="Pricing">Pricing</a></li>
             <li class="nav__item"><a href="#" class="nav__link" data-title="Product">Product</a></li>
@@ -25,10 +25,10 @@
           <a href="#" class="btn"><span class="btn-text">Get started</span></a>
         </div>
       </header>
-      <section class="intro">
+      <section class="intro" id="intro">
         <div class="intro-container">
           <div class="intro-inf">
-            <h1 class="intro-title">Bring everyone together to build better products.</h1>
+            <h1 class="intro-title" id="title-site">Bring everyone together to build better products.</h1>
             <p class="intro-description">Manage makes it simple for software teams to plan day-to-day 
               tasks while keeping the larger team goals in view.</p>
               <a href="#" class="btn btn--intro"><span class="btn-text">Get started</span></a>
@@ -126,25 +126,47 @@
           <a href="#" class="btn btn--team"><span class="btn-text">Get started</span></a>
         </div>
       </section>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-section footer-social-icons">
+            <a href="" class="logo-link"><img src="/dist/images/logo-footer.svg" alt="footer-logo" class="logo-image"></a>
+            <div class="social-icons-container">
+              <a href="" class="social-icon-link"><i class="social-icon icon-facebook"></i></a>
+              <a href="" class="social-icon-link"><i class="social-icon icon-youtube"></i></a>
+              <a href="" class="social-icon-link"><i class="social-icon icon-twitter"></i></a>
+              <a href="" class="social-icon-link"><i class="social-icon icon-pinterest"></i></a>
+              <a href="" class="social-icon-link"><i class="social-icon icon-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-section footer-links">
+            <div class="footer-links__column">
+              <a href="#" class="footer-links__item">Home</a>
+              <a href="#" class="footer-links__item">Pricing</a>
+              <a href="#" class="footer-links__item">Product</a>
+              <a href="#" class="footer-links__item">About us</a>
+            </div>
+            <div class="footer-links__column">
+              <a href="#" class="footer-links__item">Careers</a>
+              <a href="#" class="footer-links__item">Community</a>
+              <a href="#" class="footer-links__item">Privacy policy</a>
+            </div>
+          </div>
+          <div class="footer-section footer-newsletter">
+            <div class="form-container">
+              <form class="form-newsletter" id="form">
+                <input type="text" class="form-input" placeholder="Updates in your inbox..." id="email">
+                <button type="submit" class="btn btn--form"><span class="btn-text">Go</span></button>
+            </form>
+            <span class="form-error-message form-error-message--hidden" id="error-message">Please insert a valid email</span>
+            </div>
+
+            <p class="footer-copyright">Copyright 2020. All Rights Reserved</p>
+          </div>
+        </div>
+      </footer>
     </div>
   </main>
-  
-
-  <!-- Simplify how your team works today.
-  Get Started
-
-  Home
-  Pricing
-  Products
-  About Us
-  Careers
-  Community
-  Privacy Policy
-
-  Updates in your inbox…
-  Go
-
-  Copyright 2020. All Rights Reserved -->
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/main.js" type="module"></script>

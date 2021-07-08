@@ -1,0 +1,45 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.form-input{
+    @include m.form-padding;
+    padding-left: 1rem; padding-right: 1rem;
+    border-radius: 1.4rem;
+    border: 1px solid transparent;
+    font-family: v.$font-family;
+    margin-right: .2rem;
+    outline: none;
+    min-width: 13rem;
+
+
+    &::placeholder{
+        color: v.$c-darkGrayishBlue;
+    }
+
+    &--invalid{
+        border: 1px solid v.$c-red;
+        color: v.$c-red;
+    }
+
+    &--valid{
+        border: 1px solid v.$c-green;
+    }
+}
+
+.form-error-message{
+    font-size: .7rem;
+    margin-left: 1rem;
+    font-style: oblique;
+
+    &--hidden{
+        visibility: hidden;
+    }
+
+    &--valid{
+        color:v.$c-green;
+    }
+
+    &--invalid{
+        color: v.$c-red;
+    }
+}

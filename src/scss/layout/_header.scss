@@ -1,8 +1,46 @@
 @use '../utilities/mixins' as m;
+@use '../utilities/variables' as v;
+@use '../utilities/functions' as f;
 
 .header{
     width: 100%;
     position: absolute;
+
+    &--animated{
+        animation: openHeader 2s;
+    }
+
+    &--scrolled{
+        position: fixed;
+        top: 0;
+        box-shadow: 0 8px 20px rgba(87, 87, 87, 0.267);
+        background-color: v.$c-primary;
+        z-index: 1000;
+        overflow: hidden;
+        animation: openHeader .5s;
+
+        & .btn{
+            color: v.$c-primary;
+            background-color: v.$c-lightGray;
+            font-weight: f.font-weight('bold');
+
+            &::before{
+                background-color: v.$c-paleRed;
+            }
+        }
+
+        //Change img when nav is scrolled
+        & .logo-image{
+            content: url(/dist/images/logo-navscrolled.svg);
+        }
+        & .nav__link{
+            color: v.$c-lightGray;
+
+            &::before{
+                color: v.$c-secundary;
+            }
+        }
+    }
 }
 
 .header-container{
@@ -14,7 +52,30 @@
     align-items: center;
 }
 
+.logo-image{
+    content: url(/dist/images/logo.svg);
+}
+
 .logo-link{
     display: flex;
     align-items: center;
 }
+
+@keyframes openHeader {
+    from {
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes closeHeader {
+    from {
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-100%);
+    }
+}
+

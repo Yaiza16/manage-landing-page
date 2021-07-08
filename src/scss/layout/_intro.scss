@@ -15,14 +15,50 @@
     font-size: 3.5rem;
     color: v.$c-secundary;
     margin-bottom: 2rem;
+    color: transparent;
+
+    &__char{
+        opacity: 0;
+        transition: all .3s ease;
+        color: v.$c-secundary;
+
+        &--fade{
+            opacity: 1;
+        }
+    }
 }
 
+.intro-description{
+    animation: moveOn 3s;
+}
 
+.btn--intro{
+    animation: moveOn 3s;
+}
 .intro-image-container{
     width: 50%;
     max-width: 580px;
+    animation: opacity 4s;
 }
 
 .intro-image{
     object-fit: cover;
+}
+
+@keyframes opacity{
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes moveOn{
+    from{
+        transform: translateX(-800px);
+    }
+    to{
+        transform: translateX(0);
+    }
 }

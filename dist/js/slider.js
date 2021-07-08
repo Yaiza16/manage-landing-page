@@ -5,6 +5,12 @@ export default function slider(){
         spaceBetween: 40,
         setWrapperSize: true,
         loop: true,
+        grabCursor: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
