@@ -10,10 +10,12 @@
 .footer-container{
     @include m.general-padding;
     padding-top: 2rem; padding-bottom: 2rem;
+    width: 100%;
     display: grid;
     grid-template-columns: auto 1fr auto;
     column-gap: 8rem;
     grid-template-rows: repeat(2, auto);
+    justify-content: space-between;
     grid-template-areas: 
     "logo links newsletter"
     "icons links copyright";   

@@ -322,6 +322,8 @@ body {
 .form-input {
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   border-radius: 1.4rem;
   border: 1px solid transparent;
   font-family: "Be Vietnam", sans-serif;
@@ -349,6 +351,7 @@ body {
   font-size: 0.7rem;
   margin-left: 1rem;
   font-style: oblique;
+  float: left;
 }
 .form-error-message--hidden {
   visibility: hidden;
@@ -742,10 +745,12 @@ body {
   padding: 0 10%;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  width: 100%;
   display: grid;
   grid-template-columns: auto 1fr auto;
   column-gap: 8rem;
   grid-template-rows: repeat(2, auto);
+  justify-content: space-between;
   grid-template-areas: "logo links newsletter" "icons links copyright";
 }
 @media only screen and (max-width: 1100px) {
