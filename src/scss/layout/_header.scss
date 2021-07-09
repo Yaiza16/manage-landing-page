@@ -32,7 +32,7 @@
 
         //Change img when nav is scrolled
         & .logo-image{
-            content: url(/dist/images/logo-navscrolled.svg);
+            content: url(images/logo-navscrolled.svg);
         }
         & .nav__link{
             color: v.$c-lightGray;
@@ -58,7 +58,7 @@
 }
 
 .logo-image{
-    content: url(/dist/images/logo.svg);
+    content: url(images/logo.svg);
 }
 
 .logo-link{
