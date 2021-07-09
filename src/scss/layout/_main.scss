@@ -1,12 +1,12 @@
 @use '../utilities/mixins' as m;
 
 .main{
-    background: url(/dist/images/bg-tablet-pattern.svg) no-repeat 125% -230px,
-                url(/dist/images/bg-tablet-pattern.svg) no-repeat -80% 1020px;
+    background: url(../images/bg-tablet-pattern.svg) no-repeat 125% -230px,
+                url(../images/bg-tablet-pattern.svg) no-repeat -80% 1020px;
 
                 @include m.mq('sm'){
-                    background: url(/dist/images/bg-tablet-pattern.svg) no-repeat -0% -450px,
-                    url(/dist/images/bg-tablet-pattern.svg) no-repeat -30% 200px;
+                    background: url(../images/bg-tablet-pattern.svg) no-repeat -0% -450px,
+                    url(../images/bg-tablet-pattern.svg) no-repeat -30% 200px;
 
                 }
 }

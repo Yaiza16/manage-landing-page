@@ -45,8 +45,8 @@ body {
 
 @font-face {
   font-family: "icomoon";
-  src: url("/dist/fonts/icomoon.eot?2ib2e4");
-  src: url("/dist/fonts/icomoon.eot?2ib2e4#iefix") format("embedded-opentype"), url("/dist/fonts/icomoon.ttf?2ib2e4") format("truetype"), url("/dist/fonts/icomoon.woff?2ib2e4") format("woff"), url("/dist/fonts/icomoon.svg?2ib2e4#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?2ib2e4");
+  src: url("../fonts/icomoon.eot?2ib2e4#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?2ib2e4") format("truetype"), url("../fonts/icomoon.woff?2ib2e4") format("woff"), url("../fonts/icomoon.svg?2ib2e4#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -399,11 +399,11 @@ body {
 }
 
 .main {
-  background: url(/dist/images/bg-tablet-pattern.svg) no-repeat 125% -230px, url(/dist/images/bg-tablet-pattern.svg) no-repeat -80% 1020px;
+  background: url(../images/bg-tablet-pattern.svg) no-repeat 125% -230px, url(../images/bg-tablet-pattern.svg) no-repeat -80% 1020px;
 }
 @media only screen and (max-width: 600px) {
   .main {
-    background: url(/dist/images/bg-tablet-pattern.svg) no-repeat 0% -450px, url(/dist/images/bg-tablet-pattern.svg) no-repeat -30% 200px;
+    background: url(../images/bg-tablet-pattern.svg) no-repeat 0% -450px, url(../images/bg-tablet-pattern.svg) no-repeat -30% 200px;
   }
 }
 
